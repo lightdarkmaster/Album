@@ -1,0 +1,48 @@
+#gallery {
+    line-height: 0;
+    -webkit-column-count: 5;
+    /* split it into 5 columns */
+    -webkit-column-gap: 5px;
+    /* give it a 5px gap between columns */
+    -moz-column-count: 5;
+    -moz-column-gap: 5px;
+    column-count: 5;
+    column-gap: 5px;
+}
+
+.container1 {
+    color: #00ff;
+}
+
+#gallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 5px;
+    /* to match column gap */
+    filter: grayscale(80%);
+    transition: filter .5s;
+}
+
+#gallery img:hover {
+    filter: none;
+}
+
+.container {
+    background-color: black;
+}
+
+.footer {
+    color: rgb(252, 50, 0);
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 60px;
+    margin-right: 60px;
+}
+
+@media (max-width: 1200px) {
+    #gallery {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
